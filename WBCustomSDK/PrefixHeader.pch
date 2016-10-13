@@ -1,0 +1,41 @@
+//
+//  PrefixHeader.pch
+//  WBCustomSDK
+//
+//  Created by 吴飚 on 16/9/22.
+//  Copyright © 2016年 wubiao. All rights reserved.
+//
+
+#ifdef DEBUG
+
+#   define DLog(fmt, ...) {NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}
+#   define ELog(err) {if(err) DLog(@"%@", err)}
+
+#else
+
+#   define DLog(...)
+#   define ELog(err)
+
+#endif
+
+
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Header.h"
+#import "NSArray+Extension.h"
+#import "NSDate+Extension.h"
+#import "NSDictionary+Extension.h"
+#import "NSString+Extension.h"
+#import "NSTimer+Extension.h"
+#import "CALayer+Extension.h"
+#import "UIButton+Extension.h"
+#import "UIImage+Extension.h"
+#import "UILabel+Extension.h"
+#import "UITextView+Extension.h"
+#import "UIView+Extension.h"
+#import "UIViewController+Extension.h"
+
+#endif
